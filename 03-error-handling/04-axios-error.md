@@ -82,7 +82,7 @@ if (axios.isAxiosError(error)) {
 **الخطوة التالية:** نبدأ بتفكيك `AxiosError`، وأول property هنشرحها هي `error.response`.
 <details>
 <summary>error.response</summary>
-كمل
+
 **خد 10 دقائق: افهم `error.response` أولًا، لأنه أهم property في `AxiosError` لما يحصل `HTTP Error`.**
 
 ## 📍 Roadmap
