@@ -81,10 +81,8 @@ if (axios.isAxiosError(error)) {
 
 **الخطوة التالية:** نبدأ بتفكيك `AxiosError`، وأول property هنشرحها هي `error.response`.
 <details>
-<summary>كمل</summary>
-user
+<summary>error.response</summary>
 كمل
-ChatGPT
 **خد 10 دقائق: افهم `error.response` أولًا، لأنه أهم property في `AxiosError` لما يحصل `HTTP Error`.**
 
 ## 📍 Roadmap
@@ -328,7 +326,7 @@ error.response?.data
 **الخطوة التالية:** اكتب قيمة كل واحد فيهم.
 </details>
 كمل
-ChatGPT
+
 **خد 10 دقائق: افهم `error.response` أولًا، لأنه أهم property في `AxiosError` لما يحصل `HTTP Error`.**
 
 ## 📍 Roadmap
@@ -574,7 +572,7 @@ error.response?.data
 <summary>والله أنت كتبت فوق إن الـ error response وبعدين بيتstatus دي معناها بتديك true أو false، فبتديك false، ولكن أنت هنا قلت إنها ترجع 404، فدي ما أعرفش إزاي، المفروض أقول دوت code عشان ترجع 404. أما بالنسبة للنقطة التانية error response، لو موجود، لو موجود الخطأ، في الـ response رجع الـ data، الـ data بقى اللي هي شاملة كل حاجة: الـ status والكود والـ message.</summary>
 user
 والله أنت كتبت فوق إن الـ error response وبعدين بيتstatus دي معناها بتديك true أو false، فبتديك false، ولكن أنت هنا قلت إنها ترجع 404، فدي ما أعرفش إزاي، المفروض أقول دوت code عشان ترجع 404. أما بالنسبة للنقطة التانية error response، لو موجود، لو موجود الخطأ، في الـ response رجع الـ data، الـ data بقى اللي هي شاملة كل حاجة: الـ status والكود والـ message.
-ChatGPT
+
 **خد 5 دقائق وثبّت الفرق بين `HTTP status` و`API status` و`API code`، لأنك اكتشفت نقطة مهمة جدًا في تصميم الـ API.**
 
 أنت **صح في ملاحظتك**، وأنا كان لازم أوضح الفرق بشكل أدق. 👌
@@ -772,7 +770,6 @@ API business status
 **الخطوة التالية:** نكمل `AxiosError` مع `error.request` ونشوف ليه بنحتاجه رغم إن `error.response` ممكن تكون غير موجودة.
 </details>
 والله أنت كتبت فوق إن الـ error response وبعدين بيتstatus دي معناها بتديك true أو false، فبتديك false، ولكن أنت هنا قلت إنها ترجع 404، فدي ما أعرفش إزاي، المفروض أقول دوت code عشان ترجع 404. أما بالنسبة للنقطة التانية error response، لو موجود، لو موجود الخطأ، في الـ response رجع الـ data، الـ data بقى اللي هي شاملة كل حاجة: الـ status والكود والـ message.
-ChatGPT
 **خد 5 دقائق وثبّت الفرق بين `HTTP status` و`API status` و`API code`، لأنك اكتشفت نقطة مهمة جدًا في تصميم الـ API.**
 
 أنت **صح في ملاحظتك**، وأنا كان لازم أوضح الفرق بشكل أدق. 👌
@@ -972,7 +969,6 @@ API business status
 <summary>كمل</summary>
 user
 كمل
-ChatGPT
 **خد 10 دقائق: افهم `error.request` كالمستوى الثاني داخل `AxiosError`، وبعده هنقدر نفرّق عمليًا بين `response` و`request`.**
 
 ## 📍 Roadmap
@@ -1229,7 +1225,6 @@ error.request
 **الخطوة التالية:** جاوب من فهمك، وبعدها ننتقل إلى `error.message`.
 </details>
 كمل
-ChatGPT
 **خد 10 دقائق: افهم `error.request` كالمستوى الثاني داخل `AxiosError`، وبعده هنقدر نفرّق عمليًا بين `response` و`request`.**
 
 ## 📍 Roadmap
@@ -1488,7 +1483,7 @@ error.request
 <summary>اللي موجودة الـerror response لأنه جاب الرد إن الـerror response status جاب 404، فهنا وصل للسيرفر، فده هيكون HTTP error وليس network error.</summary>
 user
 اللي موجودة الـerror response لأنه جاب الرد إن الـerror response status جاب 404، فهنا وصل للسيرفر، فده هيكون HTTP error وليس network error.
-ChatGPT
+
 **إجابتك 10/10، وفعلاً `error.response` هي النقطة الأساسية هنا.** ✅
 
 عند:
@@ -1573,7 +1568,6 @@ SECTION 3  Error Handling                 🟢
 **الخطوة التالية:** نبدأ `error.message` ونفهم الفرق بين الـ `message` وبين `error.response.data.message`.
 </details>
 اللي موجودة الـerror response لأنه جاب الرد إن الـerror response status جاب 404، فهنا وصل للسيرفر، فده هيكون HTTP error وليس network error.
-ChatGPT
 **إجابتك 10/10، وفعلاً `error.response` هي النقطة الأساسية هنا.** ✅
 
 عند:
@@ -1660,7 +1654,6 @@ SECTION 3  Error Handling                 🟢
 <summary>error.message</summary>
 user
 error.message
-ChatGPT
 **خد 7 دقائق: ثبّت الفرق بين `error.message` و`error.response.data.message`، لأن الاتنين ممكن يكون عندهم كلمة `message` لكن معناهم مختلف.**
 
 ## 📍 Roadmap
@@ -1884,7 +1877,7 @@ error.response?.data.message
 **الخطوة التالية:** جاوب الفرق بين الاتنين من فهمك.
 </details>
 error.message
-ChatGPT
+
 **خد 7 دقائق: ثبّت الفرق بين `error.message` و`error.response.data.message`، لأن الاتنين ممكن يكون عندهم كلمة `message` لكن معناهم مختلف.**
 
 ## 📍 Roadmap
@@ -2110,7 +2103,7 @@ error.response?.data.message
 <summary>بص بشب، بكل بساطة، الفرق بين الـ error message والـ error message data message: الأولى دي معناها دوت الـ access error، وده الخطأ بتاع access نفسها. أما في حتة الـ error response، هي بقى بتقول لو الـ data موجودة، خشلي جوه الـ data وهاتلي الـ message، ودي خاصة بالـ API إيه، الـ API الخاصة بالسيرفر.</summary>
 user
 بص بشب، بكل بساطة، الفرق بين الـ error message والـ error message data message: الأولى دي معناها دوت الـ access error، وده الخطأ بتاع access نفسها. أما في حتة الـ error response، هي بقى بتقول لو الـ data موجودة، خشلي جوه الـ data وهاتلي الـ message، ودي خاصة بالـ API إيه، الـ API الخاصة بالسيرفر.
-ChatGPT
+
 **خد دقيقتين وثبّت إجابتك، لأنها صحيحة جدًا: 10/10.** ✅
 
 بالضبط، أنت فرّقت بين مستويين:
@@ -2205,7 +2198,7 @@ error.response.data.code
 **الخطوة التالية:** نكمل `error.code` ونفرق بينه وبين `error.response.data.code`.
 </details>
 بص بشب، بكل بساطة، الفرق بين الـ error message والـ error message data message: الأولى دي معناها دوت الـ access error، وده الخطأ بتاع access نفسها. أما في حتة الـ error response، هي بقى بتقول لو الـ data موجودة، خشلي جوه الـ data وهاتلي الـ message، ودي خاصة بالـ API إيه، الـ API الخاصة بالسيرفر.
-ChatGPT
+
 **خد دقيقتين وثبّت إجابتك، لأنها صحيحة جدًا: 10/10.** ✅
 
 بالضبط، أنت فرّقت بين مستويين:
@@ -2302,7 +2295,7 @@ error.response.data.code
 <summary>error.code</summary>
 user
 error.code
-ChatGPT
+
 **خد 7 دقائق: افهم `error.code` كـ code داخلي مرتبط بالخطأ في Axios، وليس الـ `code` الذي أرسله الـ API.**
 
 ## 📍 Roadmap
@@ -2510,7 +2503,7 @@ error.response?.data.code
 **الخطوة التالية:** اكتب معنى الثلاثة بالترتيب.
 </details>
 error.code
-ChatGPT
+
 **خد 7 دقائق: افهم `error.code` كـ code داخلي مرتبط بالخطأ في Axios، وليس الـ `code` الذي أرسله الـ API.**
 
 ## 📍 Roadmap
@@ -2720,7 +2713,7 @@ error.response?.data.code
 <summary>رقم واحد دي معناها الـ error بتاع الـ access error، الكود لو بتاع الـ access error أو الخطأ مكتوب access. أما التانية اللي هي error response status دي برضه خاصة بالـ error بس بتاع الـ response اللي موجود اللي هو بتاع مين؟ بتاع الـ access، بيجيبلك الـ status بتاعه زي 400 مثلاً واحد أو 404. أما الـ error response.data.code دي بقى اللي جاية من الـ API بتاع السيرفر وبيتحدد الرسالة اللي حددها الراجل في الباك إند.</summary>
 user
 رقم واحد دي معناها الـ error بتاع الـ access error، الكود لو بتاع الـ access error أو الخطأ مكتوب access. أما التانية اللي هي error response status دي برضه خاصة بالـ error بس بتاع الـ response اللي موجود اللي هو بتاع مين؟ بتاع الـ access، بيجيبلك الـ status بتاعه زي 400 مثلاً واحد أو 404. أما الـ error response.data.code دي بقى اللي جاية من الـ API بتاع السيرفر وبيتحدد الرسالة اللي حددها الراجل في الباك إند.
-ChatGPT
+
 **خد 3 دقائق وثبّت المصطلحات: إجابتك في الجوهر صحيحة، لكن عندك خلط بسيط بين `Axios` و`API` في أول نقطة.**
 
 تقييمك: **9/10** ✅
@@ -2845,7 +2838,7 @@ SECTION 3  Error Handling
 **الخطوة التالية:** نبدأ **Error Normalization** بمثال عملي فيه `404` و`Network Error` ونحوّل الاثنين إلى شكل Error موحّد.
 </details>
 رقم واحد دي معناها الـ error بتاع الـ access error، الكود لو بتاع الـ access error أو الخطأ مكتوب access. أما التانية اللي هي error response status دي برضه خاصة بالـ error بس بتاع الـ response اللي موجود اللي هو بتاع مين؟ بتاع الـ access، بيجيبلك الـ status بتاعه زي 400 مثلاً واحد أو 404. أما الـ error response.data.code دي بقى اللي جاية من الـ API بتاع السيرفر وبيتحدد الرسالة اللي حددها الراجل في الباك إند.
-ChatGPT
+
 **خد 3 دقائق وثبّت المصطلحات: إجابتك في الجوهر صحيحة، لكن عندك خلط بسيط بين `Axios` و`API` في أول نقطة.**
 
 تقييمك: **9/10** ✅
@@ -2972,7 +2965,7 @@ SECTION 3  Error Handling
 <summary>AxiosError تهيائلي كان في config</summary>
 user
 AxiosError تهيائلي كان في config
-ChatGPT
+
 **خد 5 دقائق: اربط `config` داخل `AxiosError` بما درسته سابقًا عن Request Configuration.**
 
 أيوه، **بالضبط**. `AxiosError` ممكن يحتوي على `config`، ودي فعلًا من الحاجات المهمة فيه.
@@ -3092,7 +3085,7 @@ error.response
 **الخطوة التالية:** نبدأ `Error Normalization`، ونستخدم كل اللي اتعلمناه عن `response`, `request`, `message`, `code`, و`config` لبناء Error موحّد.
 </details>
 AxiosError تهيائلي كان في config
-ChatGPT
+
 **خد 5 دقائق: اربط `config` داخل `AxiosError` بما درسته سابقًا عن Request Configuration.**
 
 أيوه، **بالضبط**. `AxiosError` ممكن يحتوي على `config`، ودي فعلًا من الحاجات المهمة فيه.
@@ -3214,7 +3207,7 @@ error.response
 <summary>Error Normalization</summary>
 user
 Error Normalization
-ChatGPT
+
 **خد 15 دقيقة: هنفهم `Error Normalization` كمفهوم معماري أولًا، ثم نبني أول `normalizeError` بدون ما ندخل لسه في `Custom ApiError`.**
 
 ## 📍 Roadmap
@@ -3235,7 +3228,7 @@ SECTION 4  Interceptors                   ⬜
 ```
 </details>
 Error Normalization
-ChatGPT
+
 **خد 15 دقيقة: هنفهم `Error Normalization` كمفهوم معماري أولًا، ثم نبني أول `normalizeError` بدون ما ندخل لسه في `Custom ApiError`.**
 
 ## 📍 Roadmap
