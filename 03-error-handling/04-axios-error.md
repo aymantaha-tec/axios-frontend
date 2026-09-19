@@ -569,9 +569,83 @@ error.response?.data
 
 **الخطوة التالية:** اكتب قيمة كل واحد فيهم.
 <details>
-<summary>والله أنت كتبت فوق إن الـ error response وبعدين بيتstatus دي معناها بتديك true أو false، فبتديك false، ولكن أنت هنا قلت إنها ترجع 404، فدي ما أعرفش إزاي، المفروض أقول دوت code عشان ترجع 404. أما بالنسبة للنقطة التانية error response، لو موجود، لو موجود الخطأ، في الـ response رجع الـ data، الـ data بقى اللي هي شاملة كل حاجة: الـ status والكود والـ message.</summary>
-user
-والله أنت كتبت فوق إن الـ error response وبعدين بيتstatus دي معناها بتديك true أو false، فبتديك false، ولكن أنت هنا قلت إنها ترجع 404، فدي ما أعرفش إزاي، المفروض أقول دوت code عشان ترجع 404. أما بالنسبة للنقطة التانية error response، لو موجود، لو موجود الخطأ، في الـ response رجع الـ data، الـ data بقى اللي هي شاملة كل حاجة: الـ status والكود والـ message.
+
+
+أنا لاحظت تعارضًا في الشرح وأريد تثبيت الفرق بشكل واضح.
+
+عندنا:
+
+```ts
+error.response?.status
+```
+
+أنت شرحت في البداية أن `status` داخل الـ API response تكون `true` أو `false`، وبحسب الـ JSON عندي هي:
+
+```json
+{
+  "status": false,
+  "code": 404,
+  "message": "User not found"
+}
+```
+
+لذلك فهمت أن:
+
+```ts
+error.response?.status
+```
+
+من المفترض أن ترجع `false`.
+
+لكن بعد ذلك قلت إن:
+
+```ts
+error.response?.status
+```
+
+ترجع `404`.
+
+فأريد أن أفهم بدقة: هل `error.response?.status` ترجع `404` لأنها **HTTP status** الخاصة بـ Axios، أم أنها ترجع `false` لأنها `status` الموجودة داخل بيانات الـ API؟
+
+وبالتالي هل الصحيح أن:
+
+```ts
+error.response?.status
+```
+
+ترجع الـ **HTTP status** مثل `404`،
+
+بينما:
+
+```ts
+error.response?.data
+```
+
+ترجع الـ JSON كاملًا:
+
+```json
+{
+  "status": false,
+  "code": 404,
+  "message": "User not found"
+}
+```
+
+وبالتالي:
+
+```ts
+error.response?.data.status
+// false
+
+error.response?.data.code
+// 404
+
+error.response?.data.message
+// "User not found"
+```
+
+وأيضًا أريد أن أعرف لماذا يوجد `status` في مكان، و`status` أخرى داخل `data`، وما الفرق بين **HTTP status** و**API status** و**API code**؟
+
 
 **خد 5 دقائق وثبّت الفرق بين `HTTP status` و`API status` و`API code`، لأنك اكتشفت نقطة مهمة جدًا في تصميم الـ API.**
 
